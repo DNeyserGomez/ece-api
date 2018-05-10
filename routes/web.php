@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+$router->get('/key', function() {
+    return str_random(32);
+});
+
+$router->get('/patients', ['uses' => 'PatientsController@index']);
