@@ -20,3 +20,6 @@ $router->get('/key', function() {
 });
 
 $router->get('/patients', ['uses' => 'PatientsController@index']);
+$router->post('/patients', ['uses' => 'PatientsController@createUser']);
+$router->post('/somatometria',['uses' => 'SomatometriaController@createSomatometria']);
+$router->get('/somatometria', ['uses' => 'SomatometriaController@index']);
